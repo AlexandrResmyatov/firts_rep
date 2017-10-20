@@ -3,9 +3,44 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main {
+public class Main{
+
     static BufferedReader reader;
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, StringProcessorException {
+        StringProcessor sp = new StringProcessor();
+        //1111
+        String a = "sdf";
+        String b = "111";
+        try{
+            b = sp.multypliedString(a,-7);
+        }
+        catch (StringProcessorException e){
+            System.out.println(e.getNumber());
+            System.out.println(e.getMessage());
+        }
+
+
+        System.out.println(b);
+        //1111
+
+        //2222
+        System.out.println(StringProcessor.numberOfIngoing("nananana","na")+"!!!!!!!");
+        //2222
+
+        //-------------
+        //-------------
+        //-------------
+        //-------------
+        //-------------
+        //-------------
+        //-------------
+
+
+
+/*
+
+
+
         reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите номер задания");
         int task = Integer.parseInt(reader.readLine());
@@ -124,6 +159,7 @@ public class Main {
                 }
             }
             System.out.println("summ = " + sum + "exp(x) = " + Math.exp(xx));
+            */
         }
 
     static int factorial(int n){
