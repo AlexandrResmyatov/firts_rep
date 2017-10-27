@@ -67,7 +67,7 @@ public class Payment {
             return false;
         }
         Payment payment = (Payment) o;
-        if(this.fullName ==payment.getFullName() &&
+        if(this.fullName == payment.getFullName() &&
                 this.year == payment.year &&
                 this.month == payment.month &&
                 this.day == payment.day &&
@@ -86,6 +86,6 @@ public class Payment {
 
     @Override
     public String toString(){
-        return fullName +" " + year + " " + month+ " " + day + " " + sum;
+        return "payment:" + fullName +" " + year + " " + month+ " " + day + " " + sum;
     }
 }
