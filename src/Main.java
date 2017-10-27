@@ -2,55 +2,85 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main{
 
-    static BufferedReader reader;
+    //    static BufferedReader reader;
+//    Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) throws IOException, StringProcessorException {
+        Scanner scanner = new Scanner(System.in);
         StringProcessor sp = new StringProcessor();
-        //1111
-        String a = "sdf";
-        String b = "111";
-        try{
-            b = sp.multypliedString(a,-7);
+        int task = -1;
+
+//        int task = scanner.nextInt();
+        while (task != 0) {
+            System.out.println("Input task number");
+            System.out.println("1 - Java List 2 Task 1");
+            System.out.println("0 - Exit");
+            task = scanner.nextInt();
+            if (task == 1) func1(sp, scanner);
+//            if (task == 2) func2();
+//            if (task == 3) func3();
+//            if (task == 4) func4();
+//            if (task == 5) func5();
+//            if (task == 6) func6();
+//            if (task == 7) func7();
+            if (task == 0) break;
+//            System.out.println("Введите номер задания");
+//            task = scanner.nextInt();
+
         }
-        catch (StringProcessorException e){
+    }
+        //1111
+    private static void func1(StringProcessor sp, Scanner scanner) {
+        System.out.println("Java List 2 Task 1");
+        System.out.println("Input string:");
+        String str = scanner.next();
+        System.out.println("Input number:");
+        int n = scanner.nextInt();
+        try {
+            System.out.println("output: " + sp.multypliedString(str, n));
+
+        } catch (StringProcessorException e) {
             System.out.println(e.getNumber());
             System.out.println(e.getMessage());
         }
+    }
 
 
-        System.out.println(b);
-        //1111
+//        System.out.println(b);
+    //1111
 
-        //2222
-        System.out.println(StringProcessor.numberOfIngoing("nananana","na")+"!!!!!!!");
-        //2222
-        //4444
-        StringBuilder sb = new StringBuilder("0123456789");
-        StringProcessor.deleteEverySecondCgaracter(sb);
-        System.out.println(sb.toString() + " -> " + sb.toString());
-        sb = new StringBuilder("01234567890");
-        StringProcessor.deleteEverySecondCgaracter(sb);
-        System.out.println(sb.toString() + " -> " + sb.toString());
-        //4444
+//        //2222
+//        System.out.println(StringProcessor.numberOfIngoing("nananana","na")+"!!!!!!!");
+//        //2222
+//        //4444
+//        StringBuilder sb = new StringBuilder("0123456789");
+//        StringProcessor.deleteEverySecondCgaracter(sb);
+//        System.out.println(sb.toString() + " -> " + sb.toString());
+//        sb = new StringBuilder("01234567890");
+//        StringProcessor.deleteEverySecondCgaracter(sb);
+//        System.out.println(sb.toString() + " -> " + sb.toString());
+//        //4444
+//
+//        Payment p = new Payment("asd#@fsd$F#te54twvvtdf");
+//        String aaa = new String();
+//        aaa = p.getFullName();
+//        aaa = "123123213";
+//
+//        System.out.println(p.getFullName());
+//        Payment pp = new Payment("asd#@fsd$F#te54twvvtdf");
+//        System.out.println(p.hashCode());
 
-        Payment p = new Payment("asd#@fsd$F#te54twvvtdf");
-        String aaa = new String();
-        aaa = p.getFullName();
-        aaa = "123123213";
-
-        System.out.println(p.getFullName());
-        Payment pp = new Payment("asd#@fsd$F#te54twvvtdf");
-        System.out.println(p.hashCode());
-
-        //-------------
-        //-------------
-        //-------------
-        //-------------
-        //-------------
-        //-------------
-        //-------------
+    //-------------
+    //-------------
+    //-------------
+    //-------------
+    //-------------
+    //-------------
+    //-------------
 
 
 
@@ -177,13 +207,13 @@ public class Main{
             }
             System.out.println("summ = " + sum + "exp(x) = " + Math.exp(xx));
             */
-        }
+//        }
 
-    static int factorial(int n){
-        int res=1;
-        for(int i=1;i<=n;i++){
-            res*=i;
-        }
-        return res;
-    }
+//    static int factorial(int n){
+//        int res=1;
+//        for(int i=1;i<=n;i++){
+//            res*=i;
+//        }
+//        return res;
+//    }
 }
