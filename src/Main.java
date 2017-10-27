@@ -26,6 +26,23 @@ public class Main{
         //2222
         System.out.println(StringProcessor.numberOfIngoing("nananana","na")+"!!!!!!!");
         //2222
+        //4444
+        StringBuilder sb = new StringBuilder("0123456789");
+        StringProcessor.deleteEverySecondCgaracter(sb);
+        System.out.println(sb.toString() + " -> " + sb.toString());
+        sb = new StringBuilder("01234567890");
+        StringProcessor.deleteEverySecondCgaracter(sb);
+        System.out.println(sb.toString() + " -> " + sb.toString());
+        //4444
+
+        Payment p = new Payment("asd#@fsd$F#te54twvvtdf");
+        String aaa = new String();
+        aaa = p.getFullName();
+        aaa = "123123213";
+
+        System.out.println(p.getFullName());
+        Payment pp = new Payment("asd#@fsd$F#te54twvvtdf");
+        System.out.println(p.hashCode());
 
         //-------------
         //-------------

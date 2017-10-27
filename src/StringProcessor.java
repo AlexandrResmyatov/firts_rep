@@ -22,6 +22,28 @@ public class StringProcessor {
         }
         return  count;
     }
+    public static String replacementOfDigitsByWords(String iStr){
+        String oStr = "";
+        for(int i=0; i<iStr.length(); i++){
+            if(iStr.charAt(i)=='1'){
+                oStr+="one";
+            }
+            else if(iStr.charAt(i)=='2'){
+                oStr+="one";
+            }
+            else if(iStr.charAt(i)=='3'){
+                oStr+="one";
+            }
+            else oStr+=iStr.charAt(i);
+        }
+        return oStr;
+    }
+
+    public static void deleteEverySecondCgaracter (StringBuilder inputSB){
+        for(int i = 1;i < (inputSB.length()); i++){
+            inputSB.deleteCharAt(i);
+        }
+    }
 }
 
 class StringProcessorException extends Exception{

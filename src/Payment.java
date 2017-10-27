@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public class Payment {
-    private String fullName = "";
+    private String fullName = "no name";
     private int year=0;
     private int month=0;
     private int day=0;
