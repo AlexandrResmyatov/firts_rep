@@ -1,3 +1,7 @@
+//import jdk.internal.jline.console.ConsoleReader;
+
+//import jdk.internal.jline.console.ConsoleReader;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -5,43 +9,48 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main{
-
+    static Scanner scanner = new Scanner(System.in);
+    static StringProcessor sp = new StringProcessor();
     //    static BufferedReader reader;
 //    Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) throws IOException, StringProcessorException {
-        Scanner scanner = new Scanner(System.in);
-        StringProcessor sp = new StringProcessor();
+    public static void main(String[] args) throws IOException, StringProcessorException, InterruptedException {
+//        Scanner scanner = new Scanner(System.in);
+//        StringProcessor sp = new StringProcessor();
         int task = -1;
 
 //        int task = scanner.nextInt();
         while (task != 0) {
             System.out.println("Input task number");
             System.out.println("1 - Java List 2 Task 1");
+            System.out.println("2 - Java List 2 Task 2");
+            System.out.println("3 - Java List 2 Task 3");
             System.out.println("0 - Exit");
             task = scanner.nextInt();
-            if (task == 1) func1(sp, scanner);
-//            if (task == 2) func2();
-//            if (task == 3) func3();
+            if (task == 1) func1();
+            if (task == 2) func2();
+            if (task == 3) func3();
 //            if (task == 4) func4();
 //            if (task == 5) func5();
 //            if (task == 6) func6();
 //            if (task == 7) func7();
             if (task == 0) break;
+//            Runtime runtime = Runtime.getRuntime();
+//            Process process = runtime.exec("cls");
 //            System.out.println("Введите номер задания");
 //            task = scanner.nextInt();
 
         }
     }
         //1111
-    private static void func1(StringProcessor sp, Scanner scanner) {
+    private static void func1(/*StringProcessor sp, Scanner scanner*/) {
         System.out.println("Java List 2 Task 1");
         System.out.println("Input string:");
         String str = scanner.next();
         System.out.println("Input number:");
         int n = scanner.nextInt();
         try {
-            System.out.println("output: " + sp.multypliedString(str, n));
+            System.out.println("Output: " + StringProcessor.multypliedString(str, n));
 
         } catch (StringProcessorException e) {
             System.out.println(e.getNumber());
@@ -49,12 +58,26 @@ public class Main{
         }
     }
 
+    private static void func2(){
+        System.out.println("Java List 2 Task 2");
+        System.out.println("Input first string:");
+        String str1 = scanner.next();
+        System.out.println("Input second string:");
+        String str2 = scanner.next();
+        System.out.println("Output: " + StringProcessor.numberOfIngoing(str1, str2));
+    }
+
+    private static void func3(){
+        System.out.println("Java List 2 Task 3");
+        System.out.println("Input string:");
+        String str = scanner.next();
+        System.out.println("Output:" + StringProcessor.replacementOfDigitsByWords(str));
+    }
 
 //        System.out.println(b);
     //1111
 
 //        //2222
-//        System.out.println(StringProcessor.numberOfIngoing("nananana","na")+"!!!!!!!");
 //        //2222
 //        //4444
 //        StringBuilder sb = new StringBuilder("0123456789");

@@ -26,13 +26,13 @@ public class StringProcessor {
         String oStr = "";
         for(int i=0; i<iStr.length(); i++){
             if(iStr.charAt(i)=='1'){
-                oStr+="one";
+                oStr+="ОДИН";
             }
             else if(iStr.charAt(i)=='2'){
-                oStr+="one";
+                oStr+="ДВА";
             }
             else if(iStr.charAt(i)=='3'){
-                oStr+="one";
+                oStr+="ТРИ";
             }
             else oStr+=iStr.charAt(i);
         }
