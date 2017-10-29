@@ -16,6 +16,9 @@ public class FinanceReport {
         return this.payments.size();
     }
 
+    public void addPayment(Payment payment){
+        this.payments.add(payment);
+    }
     public Payment getPayment(int numberOfPayment){
         if(numberOfPayment > payments.size()-1){
             return null;
@@ -50,7 +53,7 @@ public class FinanceReport {
         }
     }
 
-    public void totalPaymentOfDate(String date){ //суммарный платеж за дату
+    public int totalPaymentSumOfDate(String date){ //суммарный платеж за дату
         int total = 0;
         String[] massDate = date.split(" ");
         for(int i = 0; i < payments.size(); i++){
@@ -60,6 +63,7 @@ public class FinanceReport {
                 total += payments.get(i).getSum();
             }
         }
+        return total;
     }
 
     public ArrayList<String> getMonthWithoutPaymentsOfYear(int year){

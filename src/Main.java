@@ -1,49 +1,35 @@
-//import jdk.internal.jline.console.ConsoleReader;
-
-//import jdk.internal.jline.console.ConsoleReader;
-
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main{
     static Scanner scanner = new Scanner(System.in);
-    static StringProcessor sp = new StringProcessor();
-    //    static BufferedReader reader;
-//    Scanner scanner = new Scanner(System.in);
+    static FinanceReport finRep= new FinanceReport();
+//    static StringProcessor sp = new StringProcessor();
 
     public static void main(String[] args) throws IOException, StringProcessorException, InterruptedException {
-//        Scanner scanner = new Scanner(System.in);
-//        StringProcessor sp = new StringProcessor();
         int task = -1;
-
-//        int task = scanner.nextInt();
         while (task != 0) {
             System.out.println("Input task number");
             System.out.println("1 - Java List 2 Task 1");
             System.out.println("2 - Java List 2 Task 2");
             System.out.println("3 - Java List 2 Task 3");
+            System.out.println("4 - Java List 2 Task 4");
+            System.out.println("7 - Java List 2 Task 7..");
+
             System.out.println("0 - Exit");
             task = scanner.nextInt();
             if (task == 1) func1();
             if (task == 2) func2();
             if (task == 3) func3();
-//            if (task == 4) func4();
+            if (task == 4) func4();
 //            if (task == 5) func5();
 //            if (task == 6) func6();
-//            if (task == 7) func7();
+            if (task == 7) func7();
             if (task == 0) break;
-//            Runtime runtime = Runtime.getRuntime();
-//            Process process = runtime.exec("cls");
-//            System.out.println("Введите номер задания");
-//            task = scanner.nextInt();
-
         }
     }
-        //1111
-    private static void func1(/*StringProcessor sp, Scanner scanner*/) {
+    private static void func1() {
         System.out.println("Java List 2 Task 1");
         System.out.println("Input string:");
         String str = scanner.next();
@@ -71,22 +57,82 @@ public class Main{
         System.out.println("Java List 2 Task 3");
         System.out.println("Input string:");
         String str = scanner.next();
-        System.out.println("Output:" + StringProcessor.replacementOfDigitsByWords(str));
+        System.out.println("Output: " + StringProcessor.replacementOfDigitsByWords(str));
     }
 
-//        System.out.println(b);
-    //1111
+    private static void func4() {
+        System.out.println("Java List 2 Task 4");
+        System.out.println("Input string:");
+        StringBuilder sb = new StringBuilder(scanner.next());
+        StringProcessor.deleteEverySecondCgaracter(sb);
+        System.out.println("Output: " + sb);
+    }
 
-//        //2222
-//        //2222
-//        //4444
-//        StringBuilder sb = new StringBuilder("0123456789");
-//        StringProcessor.deleteEverySecondCgaracter(sb);
-//        System.out.println(sb.toString() + " -> " + sb.toString());
-//        sb = new StringBuilder("01234567890");
-//        StringProcessor.deleteEverySecondCgaracter(sb);
-//        System.out.println(sb.toString() + " -> " + sb.toString());
-//        //4444
+    private static void func7(){
+        int task = -1;
+        while (task != 0){
+            System.out.println("Input task number in FinanceReport");
+            System.out.println("1 - Add new payment");
+            System.out.println("2 - Get FinanceReport size");
+            System.out.println("3 - Get payment on character");
+            System.out.println("4 - Get payments less sum");
+            System.out.println("5 - Get payments sum on date");
+            System.out.println("6 - Get months without payments");
+            System.out.println("0 - Back");
+            task = scanner.nextInt();
+
+            if (task == 1){
+                System.out.println("Input payment name:");
+                String name = scanner.next();
+                System.out.println("Input payment year:");
+                int year = scanner.nextInt();
+                System.out.println("Input payment month:");
+                int month = scanner.nextInt();
+                System.out.println("Input payment day:");
+                int day = scanner.nextInt();
+                System.out.println("Input payment sum:");
+                int sum = scanner.nextInt();
+                finRep.addPayment(new Payment(name, year, month, day, sum));
+            }
+
+            if(task == 2){
+                System.out.println("Finance reporter size:" + finRep.getSize());
+            }
+
+            if(task == 3){
+                System.out.println("Enter first character:");
+                char c = scanner.next().charAt(0);
+                finRep.writeStartsOnCharacter(c);
+            }
+
+            if(task == 4){
+                System.out.println("Enter sum:");
+                int sum = scanner.nextInt();
+                finRep.writeWriteLessSum(sum);
+            }
+
+            if(task == 5){
+                System.out.println("Enter date dd.mm.yy");
+                String date = scanner.next();
+                System.out.println("Payment sum on " + date + ": " + finRep.totalPaymentSumOfDate(date));
+            }
+
+            if(task == 6){
+                System.out.println("Enter year:");
+                ArrayList<String> months = finRep.getMonthWithoutPaymentsOfYear(scanner.nextInt());
+                for(int i = 0; i < months.size(); i++){
+                    System.out.println(months.get(i));
+                }
+            }
+//            if (task == 2) func2();
+//            if (task == 3) func3();
+//            if (task == 4) func4();
+//            if (task == 5) func5();
+//            if (task == 6) func6();
+//            if (task == 7) func7();
+            if (task == 0) break;
+        }
+    }
 //
 //        Payment p = new Payment("asd#@fsd$F#te54twvvtdf");
 //        String aaa = new String();
