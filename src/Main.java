@@ -1,35 +1,54 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main{
     static Scanner scanner = new Scanner(System.in);
     static FinanceReport finRep= new FinanceReport();
-//    static StringProcessor sp = new StringProcessor();
 
     public static void main(String[] args) throws IOException, StringProcessorException, InterruptedException {
         int task = -1;
         while (task != 0) {
             System.out.println("Input task number");
-            System.out.println("1 - Java List 2 Task 1");
-            System.out.println("2 - Java List 2 Task 2");
-            System.out.println("3 - Java List 2 Task 3");
-            System.out.println("4 - Java List 2 Task 4");
-            System.out.println("7 - Java List 2 Task 7..");
+            System.out.println("21 - Java List 2 Task 1");
+            System.out.println("22 - Java List 2 Task 2");
+            System.out.println("23 - Java List 2 Task 3");
+            System.out.println("24 - Java List 2 Task 4");
+            System.out.println("27 - Java List 2 Task 7-9");
+
+            System.out.println("11 - Java List 1 Task 1");
+            System.out.println("12 - Java List 1 Task 2");
+            System.out.println("13 - Java List 1 Task 3");
+            System.out.println("14 - Java List 1 Task 4");
+            System.out.println("15 - Java List 1 Task 5");
+            System.out.println("16 - Java List 1 Task 6");
+            System.out.println("17 - Java List 1 Task 7");
+
+            System.out.println("18 - Java List 1 Task 8-14");
 
             System.out.println("0 - Exit");
             task = scanner.nextInt();
-            if (task == 1) func1();
-            if (task == 2) func2();
-            if (task == 3) func3();
-            if (task == 4) func4();
-//            if (task == 5) func5();
-//            if (task == 6) func6();
-            if (task == 7) func7();
+            if (task == 21) func21();
+            if (task == 22) func22();
+            if (task == 23) func23();
+            if (task == 24) func24();
+            if (task == 27) func27();
+
+            if (task == 11) func11();
+            if (task == 12) func12();
+            if (task == 13) func13();
+            if (task == 14) func14();
+            if (task == 15) func15();
+            if (task == 16) func16();
+            if (task == 17) func17();
+
+            if (task == 18) func18();
+
             if (task == 0) break;
         }
     }
-    private static void func1() {
+    private static void func21() {
         System.out.println("Java List 2 Task 1");
         System.out.println("Input string:");
         String str = scanner.next();
@@ -44,7 +63,7 @@ public class Main{
         }
     }
 
-    private static void func2(){
+    private static void func22(){
         System.out.println("Java List 2 Task 2");
         System.out.println("Input first string:");
         String str1 = scanner.next();
@@ -53,14 +72,14 @@ public class Main{
         System.out.println("Output: " + StringProcessor.numberOfIngoing(str1, str2));
     }
 
-    private static void func3(){
+    private static void func23(){
         System.out.println("Java List 2 Task 3");
         System.out.println("Input string:");
         String str = scanner.next();
         System.out.println("Output: " + StringProcessor.replacementOfDigitsByWords(str));
     }
 
-    private static void func4() {
+    private static void func24() {
         System.out.println("Java List 2 Task 4");
         System.out.println("Input string:");
         StringBuilder sb = new StringBuilder(scanner.next());
@@ -68,7 +87,7 @@ public class Main{
         System.out.println("Output: " + sb);
     }
 
-    private static void func7(){
+    private static void func27(){
         int task = -1;
         while (task != 0){
             System.out.println("Input task number in FinanceReport");
@@ -124,165 +143,132 @@ public class Main{
                     System.out.println(months.get(i));
                 }
             }
-//            if (task == 2) func2();
-//            if (task == 3) func3();
-//            if (task == 4) func4();
-//            if (task == 5) func5();
-//            if (task == 6) func6();
-//            if (task == 7) func7();
             if (task == 0) break;
         }
     }
-//
-//        Payment p = new Payment("asd#@fsd$F#te54twvvtdf");
-//        String aaa = new String();
-//        aaa = p.getFullName();
-//        aaa = "123123213";
-//
-//        System.out.println(p.getFullName());
-//        Payment pp = new Payment("asd#@fsd$F#te54twvvtdf");
-//        System.out.println(p.hashCode());
 
-    //-------------
-    //-------------
-    //-------------
-    //-------------
-    //-------------
-    //-------------
-    //-------------
-
-
-
-/*
-
-
-
-        reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Введите номер задания");
-        int task = Integer.parseInt(reader.readLine());
-        while (task != 0) {
-            if (task == 1) func1();
-            if (task == 2) func2();
-            if (task == 3) func3();
-            if (task == 4) func4();
-            if (task == 5) func5();
-            if (task == 6) func6();
-            if (task == 7) func7();
-            if (task == 0) break;
-            System.out.println("Введите номер задания");
-            task = Integer.parseInt(reader.readLine());
-
-        }
-    }
-    static void func1()
-    {
-        System.out.println(("Task 1"));
+    private static void func11(){
+        System.out.println(("Java List 1 Task 1"));
         System.out.println("Hello, World!");
     }
-        //--------
-        static void func2() throws IOException {
 
-         System.out.println("\nTask 2");
+    private static void func12(){
+        System.out.println("Java List 1 Task 2");
+        double massive_double[] = new double[3];
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Enter " + i + "th number");
+            massive_double[i] = scanner.nextDouble();
+        }
+        System.out.println(massive_double[0] * massive_double[1] * massive_double[2]);
+        System.out.println((massive_double[0] + massive_double[1] + massive_double[2]) / 3);
+        Arrays.sort(massive_double);
+        for (int i = 0; i < 3; i++) {
+            System.out.println(massive_double[i] + " ");
+        }
+    }
 
-         double massive[] = new double[3];
-         for (int i = 0; i < 3; i++) {
-             massive[i] = Double.parseDouble(reader.readLine());
-         }
-         System.out.println(massive[0] * massive[1] * massive[2]);
-         System.out.println((massive[0] + massive[1] + massive[2]) / 3);
-         Arrays.sort(massive);
-         for (int i = 0; i < 3; i++) {
-             System.out.println(massive[i] + " ");
-         }
-     }
-        //--------
-        static void func3() throws IOException {
+    private static void func13(){
+        System.out.println("Java List 1 Task 3");
+        int massive_int[] = new int[3];
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Enter " + i + "th number");
+            massive_int[i] = scanner.nextInt();
+        }
+        System.out.println(massive_int[0] * massive_int[1] * massive_int[2]);
+        System.out.println((double) (massive_int[0] + massive_int[1] + massive_int[2]) / 3);
+        Arrays.sort(massive_int);
+        for (int i = 0; i < 3; i++) {
+            System.out.println(massive_int[i] + " ");
+        }
+    }
 
-         System.out.println("\nTask 3");
-         int massive_int[] = new int[3];
-         for (int i = 0; i < 3; i++) {
-             massive_int[i] = Integer.parseInt(reader.readLine());
-         }
-         System.out.println(massive_int[0] * massive_int[1] * massive_int[2]);
-         System.out.println((double) (massive_int[0] + massive_int[1] + massive_int[2]) / 3);
-         Arrays.sort(massive_int);
-         for (int i = 0; i < 3; i++) {
-             System.out.println(massive_int[i] + " ");
-         }
-     }
-        //--------
-        static void func4() throws IOException {
+    private static void func14(){
+        System.out.println("Java List 1 Task 4");
 
-            System.out.println("\nTask 4");
-
-            double a, b, c, D;
-            a = Integer.parseInt(reader.readLine());
-            b = Integer.parseInt(reader.readLine());
-            c = Integer.parseInt(reader.readLine());
-            if (a == b && b == c && c == 0) System.out.println("x любое");
-            else {
-                D = b * b - 4 * a * c;
-                if (D > 0) {
-                    double x1, x2;
-                    x1 = (-b - Math.sqrt(D)) / (2 * a);
-                    x2 = (-b + Math.sqrt(D)) / (2 * a);
-                    System.out.println("x1 = " + x1 + ", x2 = " + x2);
-                } else if (D == 0) {
-                    double x;
-                    x = -b / (2 * a);
-                    System.out.println("x = " + x);
-                } else {
-                    System.out.println("корней нет");
-                }
-            }
-     }
-        //--------
-        static void func5() throws IOException {
-            System.out.println("\nTask 5");
-            double left = Double.parseDouble(reader.readLine());
-            double righte = Double.parseDouble(reader.readLine());
-            double delta = Double.parseDouble(reader.readLine());
-            for (double i = left; i <= righte; i += delta) {
-                System.out.println(Math.sin(i));
+        double a, b, c, D;
+        System.out.println("Enter first number");
+        a = scanner.nextInt();
+        System.out.println("Enter second number");
+        b = scanner.nextInt();
+        System.out.println("Enter third number");
+        c = scanner.nextInt();
+        if (a == b && b == c && c == 0) System.out.println("x любое");
+        else {
+            D = b * b - 4 * a * c;
+            if (D > 0) {
+                double x1, x2;
+                x1 = (-b - Math.sqrt(D)) / (2 * a);
+                x2 = (-b + Math.sqrt(D)) / (2 * a);
+                System.out.println("x1 = " + x1 + ", x2 = " + x2);
+            } else if (D == 0) {
+                double x;
+                x = -b / (2 * a);
+                System.out.println("x = " + x);
+            } else {
+                System.out.println("no roots");
             }
         }
-        //--------
-        static void func6() throws IOException {
-            System.out.println("\nTask 6");
-            double a1, b1, c1, a2, b2, c2, x, y;
-            a1 = Double.parseDouble(reader.readLine());
-            b1 = Double.parseDouble(reader.readLine());
-            c1 = Double.parseDouble(reader.readLine());
-            a2 = Double.parseDouble(reader.readLine());
-            b2 = Double.parseDouble(reader.readLine());
-            c2 = Double.parseDouble(reader.readLine());
-            b2 = b1 + b2 * (-a1 / a2);
-            c2 = c1 + c2 * (-a1 / a2);
-            y = c2 / b2;
-            x = (c1 - b1 * y) / a1;
-            System.out.println("y = " + y + " x= " + x);
-        }
-        //--------
-        static void func7() throws IOException {
-            System.out.println("\nTask 7");
-            double xx = Double.parseDouble(reader.readLine());
-            double accuracy = Double.parseDouble(reader.readLine());
-            double sum = 1;
-            for (int i = 1; i < Integer.MAX_VALUE; i++) {
-                sum += Math.pow(xx, (double) i) / ((double) factorial(i));
-                if ((Math.pow(xx, (double) i) / (double) factorial(i)) < accuracy) {
-                    i = Integer.MAX_VALUE - 1;
-                }
-            }
-            System.out.println("summ = " + sum + "exp(x) = " + Math.exp(xx));
-            */
-//        }
+    }
 
-//    static int factorial(int n){
-//        int res=1;
-//        for(int i=1;i<=n;i++){
-//            res*=i;
-//        }
-//        return res;
-//    }
+    private static void func15(){
+        System.out.println("\nJava List 1 Task 5");
+        System.out.println("Enter left border");
+        double left = scanner.nextDouble();
+        System.out.println("Enter right border");
+        double right = scanner.nextDouble();
+        System.out.println("Enter delta");
+        double delta = scanner.nextDouble();
+        for (double i = left; i <= right; i += delta) {
+            System.out.println("Sin(" + i + ") = " + Math.sin(i));
+        }
+    }
+
+    private static void func16(){
+        System.out.println("Java List 1 Task 6");
+        double a1, b1, c1, a2, b2, c2, x, y;
+        System.out.println("Enter a1, b1, c1, a2, b2, c2");
+        a1 = scanner.nextDouble();
+        b1 = scanner.nextDouble();
+        c1 = scanner.nextDouble();
+        a2 = scanner.nextDouble();
+        b2 = scanner.nextDouble();
+        c2 = scanner.nextDouble();
+        b2 = b1 + b2 * (-a1 / a2);
+        c2 = c1 + c2 * (-a1 / a2);
+        y = c2 / b2;
+        x = (c1 - b1 * y) / a1;
+        System.out.println("y = " + y + " x= " + x);
+    }
+
+    private static void func17(){
+        System.out.println("Java List 1 Task 7");
+        double xx = scanner.nextDouble();
+        double accuracy = scanner.nextDouble();
+        double sum = 1;
+        double factorial_i = 1;
+        for (int i = 1; i < Integer.MAX_VALUE; i++) {
+            factorial_i *= i;
+            sum += Math.pow(xx, (double) i) / factorial_i;
+            if ((Math.pow(xx, (double) i) / factorial_i) < accuracy) {
+                i = Integer.MAX_VALUE - 1;
+            }
+        }
+        System.out.println("sum = " + sum + "exp(x) = " + Math.exp(xx));
+    }
+
+    private static void func18(){
+        System.out.println("Java List 1 Task 8-14");
+        ArrayList<Integer> list= new ArrayList<Integer>();
+        System.out.println("Enter massive size");
+        for(int i = 0; i < scanner.nextInt(); i++){
+            System.out.println("Enter " + (i+1) + "th number");
+            list.add(scanner.nextInt());
+        }
+        //ДОДЕЛАТЬ
+        //ДОДЕЛАТЬ
+        //ДОДЕЛАТЬ
+        //ДОДЕЛАТЬ
+        //ДОДЕЛАТЬ
+        //ДОДЕЛАТЬ
+    }
 }
